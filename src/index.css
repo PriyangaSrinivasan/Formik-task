@@ -1,0 +1,31 @@
+.sidebar ul{
+  padding:0px !important;
+}
+.sidebar ul li:hover {
+     background-color:darkblue;
+}
+.error_message{
+  color:red;
+}
+.mydivcontainer{
+     width:80%;
+     margin-left:10%;
+     margin-top: 4%;
+     border:1px solid gray;
+     padding:5%
+}
+.table{
+  border-right:1px solid lightgray;
+  margin-left: 1%;
+  border-left:1px solid lightgray;
+  border-top:1px solid lightgray;
+}
+.container{
+  font-size: small;
+  font-weight:bold;
+  margin-left:2rem;
+  margin-top: 1rem;
+}
+.form-control{
+  border:1px solid gray;
+}
