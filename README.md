@@ -1,6 +1,6 @@
 # Formik Task
 
-package are i install npm i axios react-router-dom formik yup.
+package I install [npm i axios react-router-dom formik yup].
   Yup is a schema builder for runtime value parsing and validation.
   Formik is a popular open-source library for building and processing form data in React applications.
 
