@@ -9,18 +9,39 @@ import Managebook from "./Pages/Managebook";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="d-flex">
-        <div className="col-auto">
-          <Navbar />
-        </div>
-        <div>
+      <BrowserRouter>
+      <style>{`
+        .app-layout {
+          display: flex;
+          min-height: 100vh;
+          background: #0f0f13;
+        }
+        .app-content {
+          flex: 1;
+          overflow: auto;
+          display: flex;
+          flex-direction: column;
+        }
+        /* On mobile, Navbar renders a top bar OUTSIDE the flex row,
+           so the content must stack below it instead of beside it */
+        @media (max-width: 768px) {
+          .app-layout {
+            flex-direction: column;
+          }
+        }
+      `}</style>
+
+      <div className="app-layout">
+        {/* Sidebar on desktop / Top bar on mobile */}
+        <Navbar />
+
+        {/* Page content */}
+        <div className="app-content">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/addbook" element={<Addbook />} />
-            <Route path="/updatebook/:id" element={<Updatebook />} />
             <Route path="/managebook" element={<Managebook />} />
+            <Route path="/updatebook/:id" element={<Updatebook />} />
           </Routes>
         </div>
       </div>
